@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#efc9c5" />
+
+<!-- ============================================================= -->
+<!--  СЫРҒА САЛУ ТОЙЫ · Шақырту сайты (мобильді)                     -->
+<!--  Өзгертетін мәлімет: ең астындағы <script> ішіндегі CONFIG.    -->
+<!-- ============================================================= -->
+
+<title>Сырға салу тойы — Жанат</title>
+<meta name="description" content="Жанаттың сырға салу тойына шақырамыз! 7 тамыз 2026 жыл, сағат 12:00. Асқар Тоқмағамбетов ауылы." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Сырға салу тойы — Жанат" />
+<meta property="og:description" content="Сіздерді сырға салу тойымызға шақырамыз! 7 тамыз 2026 жыл, сағат 12:00." />
+<meta property="og:image" content="bridge.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 64'%3E%3Cg fill='none' stroke='%23c2a05b' stroke-width='2.2'%3E%3Ccircle cx='14' cy='9' r='6'/%3E%3Cpath d='M14 15v10'/%3E%3Cpath d='M14 25c-7 10-7 22 0 30 7-8 7-20 0-30z'/%3E%3C/g%3E%3Ccircle cx='14' cy='42' r='3' fill='%23c2a05b'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&family=Marck+Script&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet" />
+
+<style>
+/* ====================== ТАМЫРЛЫҚ ТҮСТЕР ====================== */
+:root{
+  --blush:#f6dad6;
+  --blush-soft:#fcecea;
+  --blush-deep:#ecc3bd;
+  --rose:#c9817b;
+  --rose-deep:#b56a64;
+  --rosewood:#834f4c;
+  --ink:#5a4441;
+  --ink-soft:#7c6562;
+  --ivory:#fdf7f3;
+  --cream:#f9efe8;
+  --champagne:#f3e6d3;
+  --gold:#c2a05b;
+  --gold-light:#e2ca94;
+  --gold-deep:#9d7c39;
+  --sage:#a9b49a;
+  --line:rgba(194,160,91,.40);
+  --shadow:rgba(131,79,76,.18);
+  --maxw:440px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+body{
+  font-family:"Montserrat",sans-serif;
+  color:var(--ink);
+  line-height:1.75;
+  /* Карта сыртындағы — компьютерде көрінетін орта */
+  background:
+    radial-gradient(120% 60% at 50% 0%, #f7ddd8 0%, transparent 55%),
+    radial-gradient(100% 70% at 100% 100%, #f4ddd6 0%, transparent 60%),
+    linear-gradient(160deg,#f3ddd7 0%, #efd3cc 50%, #e9c8c1 100%);
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Сыртқы ортаның нәзік өрнегі */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='none' stroke='%239d7c39' stroke-width='1'%3E%3Cpath d='M90 50c12 14 12 32 0 46-12-14-12-32 0-46zm0 0c-12 14-30 14-44 0 14-12 32-12 44 0zm0 0c12-14 30-14 44 0-14 12-32 12-44 0z'/%3E%3Ccircle cx='90' cy='90' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:220px;
+}
+
+img{max-width:100%;display:block}
+
+/* ====================== ТЕЛЕФОН КАРТАСЫ ====================== */
+.stage{position:relative;z-index:1;display:flex;justify-content:center;min-height:100vh}
+
+.phone{
+  position:relative;
+  width:100%;
+  max-width:var(--maxw);
+  background:
+    radial-gradient(130% 50% at 50% 0%, var(--blush-soft) 0%, transparent 55%),
+    linear-gradient(180deg, var(--ivory) 0%, var(--cream) 60%, #f6e7df 100%);
+  overflow:hidden;
+}
+/* Ішкі алтын жақтау — бүкіл бетті айналдыра */
+.phone::after{
+  content:"";position:absolute;inset:13px;z-index:6;pointer-events:none;
+  border:1px solid var(--line);
+}
+
+/* Компьютерде — нағыз телефон көрінісі */
+@media(min-width:520px){
+  .stage{padding:46px 20px}
+  .phone{
+    border-radius:42px;
+    box-shadow:0 50px 100px -34px rgba(131,79,76,.55), 0 0 0 1px rgba(194,160,91,.22), inset 0 0 0 7px #fff;
+  }
+  .phone::after{inset:20px;border-radius:26px}
+}
+
+/* Бұрыш өрнектері */
+.corner{position:absolute;width:30px;height:30px;color:var(--gold);opacity:.7;z-index:6;pointer-events:none}
+.corner.tl{top:20px;left:20px}
+.corner.tr{top:20px;right:20px;transform:scaleX(-1)}
+.corner.bl{bottom:20px;left:20px;transform:scaleY(-1)}
+.corner.br{bottom:20px;right:20px;transform:scale(-1)}
+@media(min-width:520px){.corner.tl,.corner.tr{top:27px}.corner.tl,.corner.bl{left:27px}.corner.tr,.corner.br{right:27px}.corner.bl,.corner.br{bottom:27px}}
+
+.wrap{position:relative;z-index:2;padding:0 26px}
+section{padding:54px 0}
+
+/* ====================== ТИПОГРАФИЯ ====================== */
+.eyebrow{
+  font-family:"Montserrat",sans-serif;font-weight:500;
+  letter-spacing:.46em;text-transform:uppercase;font-size:11px;
+  color:var(--gold-deep);text-align:center;padding-left:.46em;
+}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:600;color:var(--rosewood);line-height:1.1}
+
+.section-title{
+  text-align:center;font-size:clamp(31px,9vw,40px);font-weight:600;
+  letter-spacing:.005em;margin-top:6px;
+}
+.script{font-family:"Marck Script",cursive;font-weight:400}
+
+/* ====================== ӨРНЕК БӨЛГІШ ====================== */
+.divider{display:flex;align-items:center;justify-content:center;gap:15px;margin:20px auto;color:var(--gold)}
+.divider .rule{height:1px;width:min(74px,20vw);background:linear-gradient(90deg,transparent,var(--gold))}
+.divider .rule:last-child{background:linear-gradient(90deg,var(--gold),transparent)}
+.divider .earring{width:26px;height:auto;flex:none}
+
+/* ====================== HERO ====================== */
+.hero{
+  min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:64px 26px 44px;position:relative;
+}
+
+/* Монограмма медальоны */
+.monogram{
+  width:74px;height:74px;border-radius:50%;display:grid;place-items:center;
+  color:var(--gold-deep);position:relative;margin-bottom:8px;
+  background:radial-gradient(circle at 38% 32%, #fff, var(--blush-soft) 75%);
+  box-shadow:0 10px 26px -12px var(--shadow);
+}
+.monogram::before{content:"";position:absolute;inset:6px;border:1px solid var(--line);border-radius:50%}
+.monogram svg{width:38px;height:38px}
+
+.hero .occasion{
+  font-size:clamp(36px,11vw,58px);font-weight:600;color:var(--rosewood);
+  margin-top:10px;letter-spacing:.01em;
+}
+.hero .amp{
+  font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;
+  color:var(--rose);font-size:16px;letter-spacing:.34em;text-transform:uppercase;
+  margin:14px 0 2px;
+}
+.hero .name{
+  font-family:"Marck Script",cursive;font-size:clamp(56px,19vw,96px);
+  color:var(--rose);line-height:1;margin:2px 0 4px;
+}
+.hero .date-line{
+  font-family:"Cormorant Garamond",serif;font-weight:600;
+  font-size:clamp(19px,5.4vw,24px);letter-spacing:.36em;
+  color:var(--gold-deep);padding-left:.36em;
+}
+
+/* Аркалы портрет */
+.portrait{
+  position:relative;width:min(286px,72vw);aspect-ratio:3/4;
+  margin:30px auto 28px;border-radius:143px 143px 14px 14px;padding:9px;
+  background:linear-gradient(160deg,var(--gold-light) 0%,var(--gold) 48%,var(--gold-deep) 100%);
+  box-shadow:0 30px 56px -22px var(--shadow), 0 8px 20px -10px rgba(194,160,91,.45);
+}
+.portrait::after{content:"";position:absolute;inset:5px;border:1px solid rgba(253,247,243,.7);border-radius:139px 139px 10px 10px;pointer-events:none;z-index:3}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 16%;border-radius:135px 135px 7px 7px;background:var(--blush-soft)}
+.portrait .crown{
+  position:absolute;top:-25px;left:50%;transform:translateX(-50%);width:48px;height:48px;
+  color:var(--gold-deep);background:var(--ivory);border-radius:50%;display:grid;place-items:center;
+  box-shadow:0 6px 16px -6px var(--shadow);z-index:4;border:1px solid var(--line);
+}
+.portrait .crown svg{width:28px;height:28px}
+
+.scroll-cue{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:9px;color:var(--gold-deep);font-size:10px;letter-spacing:.34em;text-transform:uppercase;animation:bob 2.6s ease-in-out infinite}
+.scroll-cue .arrow{width:1px;height:34px;background:linear-gradient(var(--gold),transparent)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+/* ====================== ШАҚЫРУ МӘТІНІ ====================== */
+.card-soft{
+  background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(252,236,234,.5));
+  border:1px solid rgba(194,160,91,.3);border-radius:22px;padding:42px 28px;text-align:center;
+  box-shadow:0 20px 44px -28px var(--shadow);
+}
+.greeting .bismillah{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:20px;color:var(--rose);margin-bottom:16px}
+.greeting p{font-weight:300;font-size:16px;color:var(--ink)}
+.greeting p + p{margin-top:15px}
+.greeting b{color:var(--rosewood);font-weight:500}
+
+/* ====================== КЕРІ САНАҚ ====================== */
+.countdown{text-align:center}
+.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:420px;margin:28px auto 0}
+.cd-cell{position:relative;background:linear-gradient(180deg,#fff,var(--blush-soft));border:1px solid rgba(194,160,91,.32);border-radius:15px;padding:18px 4px 13px;box-shadow:0 12px 28px -22px var(--shadow);overflow:hidden}
+.cd-cell::before{content:"";position:absolute;top:0;left:22%;right:22%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.cd-num{font-family:"Playfair Display",serif;font-weight:600;font-size:clamp(27px,8.6vw,38px);color:var(--rosewood);line-height:1;font-variant-numeric:tabular-nums}
+.cd-lab{margin-top:8px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:500}
+
+/* ====================== ТОЙ ДЕРЕКТЕРІ ====================== */
+.details .info{display:flex;flex-direction:column;gap:14px;max-width:430px;margin:28px auto 0}
+.info-card{
+  display:flex;align-items:center;gap:17px;
+  background:linear-gradient(180deg,rgba(255,255,255,.64),rgba(249,239,232,.52));
+  border:1px solid rgba(194,160,91,.28);border-radius:18px;padding:19px 20px;
+  box-shadow:0 14px 34px -28px var(--shadow);transition:transform .4s ease,box-shadow .4s ease;
+}
+.info-card:hover{transform:translateY(-3px);box-shadow:0 20px 40px -26px var(--shadow)}
+.info-card .ic{flex:none;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:var(--gold-deep);background:radial-gradient(circle at 35% 30%,#fff,var(--blush) 92%);border:1px solid var(--line)}
+.info-card .ic svg{width:23px;height:23px}
+.info-card .k{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+.info-card .v{font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--rosewood);font-weight:600;line-height:1.25}
+.info-card .v small{display:block;font-family:"Montserrat";font-size:12.5px;color:var(--ink-soft);font-weight:300;letter-spacing:0;text-transform:none;margin-top:3px}
+
+/* ====================== ҚОРЫТЫНДЫ ====================== */
+.closing{text-align:center}
+.closing p{font-weight:300;font-size:16px;color:var(--ink);max-width:27em;margin:0 auto}
+.closing .sign{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:21px;color:var(--rose);margin-top:22px}
+.hosts{margin-top:10px}
+.hosts .label{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:6px}
+.hosts .nm{font-family:"Cormorant Garamond",serif;font-size:27px;color:var(--rosewood);font-weight:600;letter-spacing:.01em}
+
+footer{text-align:center;padding:30px 26px 46px;position:relative;z-index:2}
+footer .fname{font-family:"Marck Script",cursive;font-size:34px;color:var(--rose);line-height:1}
+footer .fdate{font-size:11px;letter-spacing:.34em;color:var(--gold-deep);margin-top:6px;padding-left:.34em}
+
+/* ====================== ГҮЛ ЖАПЫРАҚТАРЫ ====================== */
+.petals{position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden}
+.petal{position:absolute;top:-9vh;will-change:transform;animation:fall linear infinite}
+.petal i{display:block;background:radial-gradient(circle at 30% 30%,#fff 0%,var(--blush) 38%,var(--blush-deep) 100%);border-radius:0 100% 0 100%;will-change:transform;animation:sway ease-in-out infinite alternate}
+@keyframes fall{from{transform:translateY(-9vh)}to{transform:translateY(116vh)}}
+@keyframes sway{from{transform:translateX(-15px) rotate(-25deg)}to{transform:translateX(15px) rotate(48deg)}}
+
+/* ====================== REVEAL ====================== */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ====================== БЕЙІМДЕЛУ ====================== */
+@media(max-width:380px){
+  .wrap{padding:0 20px}
+  .cd-grid{gap:7px}
+  .cd-cell{padding:14px 3px 11px;border-radius:12px}
+  .info-card{padding:16px;gap:13px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none;transition:none}
+  .petals{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="petals" aria-hidden="true"></div>
+
+<div class="stage">
+  <main class="phone">
+
+    <!-- Бұрыш өрнектері -->
+    <svg class="corner tl" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M2 22c0-11 9-20 20-20M8 22c0-8 6-14 14-14M2 22c6 0 11 5 11 11" stroke="currentColor" stroke-width="1.1"/><circle cx="22" cy="2" r="1.4" fill="currentColor"/></svg>
+    <svg class="corner tr" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M2 22c0-11 9-20 20-20M8 22c0-8 6-14 14-14M2 22c6 0 11 5 11 11" stroke="currentColor" stroke-width="1.1"/><circle cx="22" cy="2" r="1.4" fill="currentColor"/></svg>
+    <svg class="corner bl" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M2 22c0-11 9-20 20-20M8 22c0-8 6-14 14-14M2 22c6 0 11 5 11 11" stroke="currentColor" stroke-width="1.1"/><circle cx="22" cy="2" r="1.4" fill="currentColor"/></svg>
+    <svg class="corner br" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M2 22c0-11 9-20 20-20M8 22c0-8 6-14 14-14M2 22c6 0 11 5 11 11" stroke="currentColor" stroke-width="1.1"/><circle cx="22" cy="2" r="1.4" fill="currentColor"/></svg>
+
+    <div class="wrap">
+
+      <!-- ==================== HERO ==================== -->
+      <header class="hero">
+        <div class="monogram reveal" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M20 7c2.4 3.6 2.4 8.4 0 12-2.4-3.6-2.4-8.4 0-12Z" fill="currentColor" opacity=".85"/>
+            <path d="M20 33c-2.4-3.6-2.4-8.4 0-12 2.4 3.6 2.4 8.4 0 12Z" fill="currentColor" opacity=".85"/>
+            <path d="M7 20c3.6-2.4 8.4-2.4 12 0-3.6 2.4-8.4 2.4-12 0Z" fill="currentColor" opacity=".85"/>
+            <path d="M33 20c-3.6 2.4-8.4 2.4-12 0 3.6-2.4 8.4-2.4 12 0Z" fill="currentColor" opacity=".85"/>
+            <circle cx="20" cy="20" r="2.4" fill="currentColor"/>
+          </svg>
+        </div>
+
+        <p class="eyebrow reveal">Қош келдіңіздер</p>
+        <h1 class="occasion reveal">Сырға салу&nbsp;тойы</h1>
+
+        <div class="portrait reveal">
+          <span class="crown" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l1.7 4.5L18.5 4l-1.1 4.9L22 11l-4.6 1.7L20 17l-5-1.1L12 22l-3-6.1L4 17l2.6-4.3L2 11l4.6-2.1L5.5 4l4.8 2.5L12 2Z" fill="currentColor" opacity=".9"/></svg>
+          </span>
+          <img src="bridge.png" alt="Тойдың иесі — сырға салынатын қыз" loading="eager" />
+        </div>
+
+        <p class="amp reveal">сүйікті қызымыз</p>
+        <p class="name reveal" data-bride>Жанат</p>
+        <p class="date-line reveal">07 · 08 · 2026</p>
+
+        <div class="scroll-cue" aria-hidden="true"><span>Толығырақ</span><span class="arrow"></span></div>
+      </header>
+
+      <!-- ==================== ШАҚЫРУ МӘТІНІ ==================== -->
+      <section class="greeting">
+        <div class="card-soft reveal">
+          <p class="bismillah">Бісміллаһир-рахманир-рахим</p>
+          <p>Қадірлі туыстар, жора-жолдастар мен ардақты қонақтар!</p>
+          <p>Біздің шаңырағымызға нұр сыйлаған асыл қызымыз <b data-bride>Жанаттың</b> өміріндегі ең әдемі сәт&nbsp;— <b>сырға салу тойына</b> шақырамыз.</p>
+        </div>
+      </section>
+
+      <!-- ==================== КЕРІ САНАҚ ==================== -->
+      <section class="countdown">
+        <p class="eyebrow reveal">Қуанышты сәтке дейін</p>
+        <h2 class="section-title reveal">Қанша уақыт қалды?</h2>
+        <div class="cd-grid reveal" id="cd">
+          <div class="cd-cell"><div class="cd-num" data-d>00</div><div class="cd-lab">Күн</div></div>
+          <div class="cd-cell"><div class="cd-num" data-h>00</div><div class="cd-lab">Сағат</div></div>
+          <div class="cd-cell"><div class="cd-num" data-m>00</div><div class="cd-lab">Минут</div></div>
+          <div class="cd-cell"><div class="cd-num" data-s>00</div><div class="cd-lab">Секунд</div></div>
+        </div>
+      </section>
+
+      <!-- ==================== ТОЙ ДЕРЕКТЕРІ ==================== -->
+      <section class="details">
+        <p class="eyebrow reveal">Той салтанаты</p>
+        <h2 class="section-title reveal">Қашан және қайда?</h2>
+        <div class="info">
+          <div class="info-card reveal">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg></span>
+            <div><div class="k">Күні</div><div class="v">7 тамыз, 2026 жыл<small>жұма күні</small></div></div>
+          </div>
+          <div class="info-card reveal">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+            <div><div class="k">Уақыты</div><div class="v">Сағат 12:00<small>қонақтарды күтеміз</small></div></div>
+          </div>
+          <div class="info-card reveal">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+            <div><div class="k">Мекенжайы</div><div class="v">Асқар Тоқмағамбетов ауылы<small>Ыбырай Алтынсарин көшесі, №1 үй</small></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== ҚОРЫТЫНДЫ ==================== -->
+      <section class="closing">
+        <div class="card-soft reveal">
+          <div class="divider">
+            <span class="rule"></span>
+            <svg class="earring" viewBox="0 0 28 64" fill="none" aria-hidden="true"><circle cx="14" cy="9" r="6.2" stroke="currentColor" stroke-width="1.4"/><circle cx="14" cy="9" r="1.7" fill="currentColor"/><path d="M14 15.2V26" stroke="currentColor" stroke-width="1.4"/><path d="M14 26c-7 10-7 22 0 30 7-8 7-20 0-30Z" stroke="currentColor" stroke-width="1.4"/><circle cx="14" cy="43" r="3.1" fill="currentColor" opacity=".55"/></svg>
+            <span class="rule"></span>
+          </div>
+          <h2 class="section-title" style="margin-bottom:16px">Сіздерді күтеміз!</h2>
+          <p>Қуанышымызды бөлісіп, тойымыздың сәнін келтіресіздер деген сенімдеміз. Келген қадамыңызға қуаныштымыз!</p>
+          <p class="sign">Ізгі ниетпен&nbsp;—</p>
+          <div class="hosts">
+            <div class="label">Той иелері</div>
+            <div class="nm">Ақылбековтер әулеті</div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="fname" data-bride>Жанат</div>
+        <div class="fdate">07 · 08 · 2026</div>
+      </footer>
+
+    </div>
+  </main>
+</div>
+
+<script>
+/* ===================================================================== */
+/*  ⚙️  БАПТАУ — тек осы жерді өзгертсеңіз жеткілікті                      */
+/* ===================================================================== */
+const CONFIG = {
+  bride: "Жанат",                          // 👰 Қыздың есімі
+  targetDate: "2026-08-07T12:00:00+05:00",   // ⏰ Той күні мен уақыты (UTC+5)
+};
+/* ===================================================================== */
+
+// Есімді барлық жерге қою ("Аружанның" жалғауын сақтайды)
+document.querySelectorAll("[data-bride]").forEach(function(el){
+  el.textContent = el.textContent.replace("Жанат", CONFIG.bride);
+});
+
+// Кері санақ
+(function(){
+  var target=new Date(CONFIG.targetDate).getTime();
+  var dE=document.querySelector("[data-d]"),hE=document.querySelector("[data-h]"),
+      mE=document.querySelector("[data-m]"),sE=document.querySelector("[data-s]");
+  function p(n){return String(n).padStart(2,"0")}
+  function tick(){
+    var diff=target-Date.now();
+    if(diff<=0){
+      dE.textContent=hE.textContent=mE.textContent=sE.textContent="00";
+      var g=document.getElementById("cd");
+      if(g&&!g.dataset.done){g.dataset.done=1;g.innerHTML='<p style="grid-column:1/-1;font-family:\'Cormorant Garamond\',serif;font-size:28px;font-weight:600;color:var(--rosewood)">Той құтты болсын! 🎉</p>'}
+      return;
+    }
+    dE.textContent=p(Math.floor(diff/864e5));
+    hE.textContent=p(Math.floor(diff%864e5/36e5));
+    mE.textContent=p(Math.floor(diff%36e5/6e4));
+    sE.textContent=p(Math.floor(diff%6e4/1e3));
+  }
+  tick();setInterval(tick,1000);
+})();
+
+// Скролл анимациясы
+(function(){
+  var els=document.querySelectorAll(".reveal");
+  if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+
+// Гүл жапырақтары
+(function(){
+  if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var layer=document.querySelector(".petals"),N=14,frag=document.createDocumentFragment();
+  for(var i=0;i<N;i++){
+    var p=document.createElement("span");p.className="petal";
+    var inner=document.createElement("i");
+    var size=8+Math.random()*11,fall=10+Math.random()*9,sway=2.6+Math.random()*2.6;
+    p.style.left=(Math.random()*100)+"vw";
+    p.style.animationDuration=fall+"s";
+    p.style.animationDelay=(-Math.random()*fall)+"s";
+    inner.style.width=inner.style.height=size+"px";
+    inner.style.animationDuration=sway+"s";
+    inner.style.opacity=(.42+Math.random()*.4).toFixed(2);
+    p.appendChild(inner);frag.appendChild(p);
+  }
+  layer.appendChild(frag);
+})();
+</script>
+</body>
+</html>
